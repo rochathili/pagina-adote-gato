@@ -1,4 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Sans:wght@200..800&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Sans:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oi&family=Rubik+Spray+Paint&display=swap');
+
+:root {
+
+    /* Variáveis de cor */
+    --cor-principal: #e76f51ff;
+    --cor-secundaria: #f4a261ff;
+    --cor-terciaria: #e9c46aff;
+    --destaque: #2a9d8fff;
+    --destaque-escuro: #264653ff;
+    --preto: #172026;
+    --branco: #F2F2F2;
+    /* Variáveis de cor */
+
+    /* Variáveis de fonte */
+    --fonte-principal: "Momo Trust Sans", sans-serif;
+    --fonte-chamativa:  "Oi", serif;
+    --fonte-gigante: 80px;
+    --fonte-media: 40px;
+    /* Variáveis de fonte */
+}
 
 * {
     padding: 0;
@@ -6,15 +27,67 @@
     box-sizing: border-box;
 }
 
+.banner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    background-color: var(--cor-terciaria);
+}
+
+.banner img {
+    grid-column: 3/6;
+    grid-row: 2/6;
+}
+
+.banner .texto-foco {
+    grid-column: 7/11;
+    grid-row: 2/5;
+    text-align: center;
+    font-family: var(--fonte-chamativa);
+    font-size: var(--fonte-gigante);
+}
+
+.banner .texto-secundario {
+    grid-column: 7/11;
+    grid-row: 5/6;
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-size: var(--fonte-media);
+}
+
+/* replicando banner com flex */
+.banner2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px;
+    background-color: var(--destaque-escuro);
+}
+
+.text-box{
+    text-align: center;
+}
+
+.texto-foco2{
+    font-family: var(--fonte-chamativa);
+    font-size: var(--fonte-gigante);
+}
+
+.texto-secundario2{
+    font-family: var(--fonte-principal);
+    font-size: var(--fonte-media);
+}
+
+/* replicando banner com flex */
 #card-container {
     display: flex;
     justify-content: space-around;
-    background-color: #EBEBD3;  
+    background-color: var(--destaque);
 }
 
 .card {
-    background-color: #F95738;
-    width: 420px;
+    background-color: var(--cor-principal);
+    width: 360px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -22,18 +95,24 @@
     margin: 10px;
     border-radius: 20px;
     font-family: "Momo Trust Sans", sans-serif;
-    color: antiquewhite;
+    color: var(--branco);
     font-size: 25px;
 }
 
+.card:hover {
+    box-shadow: var(--preto) 5px 7px;
+}
+
 .card img {
-    width: 400px;
+    width: 350px;
     height: 300px;
 }
 
 .card button {
     width: 100%;
     padding: 5px;
-    border-radius: 0 0 20px 20px; 
+    border: var(--cor-principal) 5px solid;
+    border-radius: 0 0 10px 10px;
     font-family: "Momo Trust Sans", sans-serif;
+    font-size: 20px;
 }
