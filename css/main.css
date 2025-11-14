@@ -15,7 +15,7 @@
 
     /* Variáveis de fonte */
     --fonte-principal: "Momo Trust Sans", sans-serif;
-    --fonte-chamativa:  "Oi", serif;
+    --fonte-chamativa: "Oi", serif;
     --fonte-gigante: 80px;
     --fonte-media: 40px;
     /* Variáveis de fonte */
@@ -56,7 +56,7 @@
 }
 
 /* replicando banner com flex */
-.banner2{
+.banner2 {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -64,16 +64,16 @@
     background-color: var(--destaque-escuro);
 }
 
-.text-box{
+.text-box {
     text-align: center;
 }
 
-.texto-foco2{
+.texto-foco2 {
     font-family: var(--fonte-chamativa);
     font-size: var(--fonte-gigante);
 }
 
-.texto-secundario2{
+.texto-secundario2 {
     font-family: var(--fonte-principal);
     font-size: var(--fonte-media);
 }
@@ -115,4 +115,54 @@
     border-radius: 0 0 10px 10px;
     font-family: "Momo Trust Sans", sans-serif;
     font-size: 20px;
+}
+
+footer {
+    background-color: var(--destaque-escuro);
+    color: var(--branco);
+}
+
+.container-footer {
+    margin: 50px 204px 50px 204px;
+}
+
+#layer1-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-footer {
+    height: 40px;
+}
+
+.container-footer p a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 430px) {
+
+    header {
+        background-color: var(--cor-principal);
+    }
+
+    .barra-navegacao {
+        background-color: var(--cor-principal) !important;
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: column;
+        width: 430px;
+    }
+
+    .banner2 {
+        display: flex;
+        flex-direction: column;
+        width: 430px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
